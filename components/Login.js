@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {signIn} from "next-auth/client";
+import { signIn } from "next-auth/client";
 
 function Login() {
   return (

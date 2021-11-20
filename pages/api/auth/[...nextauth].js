@@ -1,10 +1,10 @@
 import NextAuth from "next-auth";
-import FacebookProvider from "next-auth/providers/facebook";
+import Provider from "next-auth/providers";
 
 export default NextAuth({
   providers: [
     // OAuth authentication providers...
-    FacebookProvider({
+    Provider.Facebook({
       clientId: process.env.FACEBOOK_ID,
       clientSecret: process.env.FACEBOOK_SECRET,
     }),

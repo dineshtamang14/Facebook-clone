@@ -31,9 +31,9 @@ function Header() {
           />
 
           <div className="flex ml-2 pl-2 items-center rounded-full bg-gray-100">
-            <SearchIcon className="h-6 text-gray-600" />
+            <SearchIcon className="hidden h-6 text-gray-600" />
             <input
-              className="hidden md:inline-flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink"
+              className="hidden p-2 md:inline-flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink"
               type="text"
               placeholder="Search Facebook"
             />
@@ -59,7 +59,6 @@ function Header() {
           <ChevronDownIcon className="icon" />
           <p className="whitespace-nowrap font-semibold pr-3">Dinesh Tamang</p>
         </div>
-
       </div>
     );
 }
