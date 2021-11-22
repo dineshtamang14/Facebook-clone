@@ -36,8 +36,8 @@ export default function Home({ session, posts }) {
   )
 }
 
-export async function getServerSideProps(context){
-  //Get the user
+export async function getServerSideProps(context) {
+  // Get User
   const session = await getSession(context);
 
   const posts = await db.collection("posts").orderBy("timestamp", "desc").get();
@@ -49,9 +49,6 @@ export async function getServerSideProps(context){
   }));
 
   return {
-    props: {
-      session,
-      posts: docs,
-    }
-  }
-};
+    props: { session, posts: docs },
+  };
+}
