@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import * as firebase from "firebase/app";
 import "firebase/storage";
 
 const firebaseConfig = {
@@ -10,7 +10,9 @@ const firebaseConfig = {
   appId: "1:138550176236:web:05aced44d8afc5215df8c9",
 };
 
-const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
+const app = !firebase.apps.length
+  ? firebase.initializeApp(firebaseConfig)
+  : firebase.app();
 
 const db = app.firebase();
 const storage = firebase.storage();
